@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transcript</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+  <style>
+    body {
+      padding: 20px;
+      width: 300px;
+      /* Set a width suitable for the popup */
+    }
+
+    .transcript-content {
+      max-height: 200px;
+      /* Limit height for scrolling */
+      overflow-y: auto;
+      /* Enable vertical scrolling */
+      border: 1px solid #ccc;
+      /* Add a border */
+      padding: 10px;
+      /* Add padding */
+      border-radius: 5px;
+      /* Rounded corners */
+      background-color: #f9f9f9;
+      /* Light background color */
+      margin-bottom: 10px;
+    }
+
+    .warning-message {
+      color: red;
+      /* Red color for warnings */
+      margin-bottom: 10px;
+      /* Spacing below the warning */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="title is-4">Transcript</h1>
+
+    <!-- Warning message section -->
+    <div id="warningMessage" class="warning-message" style="display: none;">
+      Please enable captions for the meeting to capture transcripts.
+    </div>
+
+    <div class="transcript-content" id="transcriptContent">
+      <p id="noTranscriptMessage">No transcript found.</p>
+    </div>
+    <button class="button is-danger" id="clearTranscriptButton">Clear Transcript</button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+
+</html>
